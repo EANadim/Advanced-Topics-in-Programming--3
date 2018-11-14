@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+</head>
+<body>
+	<h1>Welcome Home!</h1>
+
+	<a href="/employerHome">Back</a>
+	
+	<table border="1">
+		<tr>
+			<th>Company Name</th>
+			<th>Job Title</th>
+			<th>Location</th>
+			<th>Salary</th>
+			<th>UserName</th>
+		</tr>
+		<% for(var i = 0; i < userList.length; i++){ %>
+
+		<tr>
+			<td><%= userList[i].companyName %></td>
+			<td><%= userList[i].jobTitle %></td>
+			<td><%= userList[i].location %></td>
+			<td><%= userList[i].salary %></td>
+			<td><%= userList[i].userName %></td>
+			<!--<td><a href="/employerHome/update/<%= userList[i].userName %>">Update</a> | <a href="/employerHome/delete/<%= userList[i].userName %>"> Delete</a> </td>-->
+		</tr>
+		
+		<% } %>
+
+	</table>
+</body>
+</html>
